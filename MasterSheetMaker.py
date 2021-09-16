@@ -1,5 +1,7 @@
 import os
 import pandas as pd
+path_parent = os.path.abspath(os.curdir)
+print(path_parent)
 cwd = os.path.abspath('Excel Files/In System') 
 files = os.listdir(cwd)
 print(files)  
