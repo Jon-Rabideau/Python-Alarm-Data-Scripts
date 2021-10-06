@@ -1,15 +1,15 @@
 import pandas
 # import csv file
-df = pandas.read_csv('P7055_12Oct2019-Tags.CSV', header=6, encoding='latin1')
+df = pandas.read_csv('L6_BEMA_FairLife_17CC059_8SEPT2020-Tags.CSV', header=6, encoding='latin1')
 # filter out alarm data, save to new df
 
-df2 = df[(df['NAME'] == ('Alarms')) & (df['DESCRIPTION'].notnull())].reset_index()
-df2 = df2[df2['SPECIFIER'].str.contains('DINT')].reset_index()
+df2 = df[(df['NAME'] == ('ALARM')) & (df['DESCRIPTION'].notnull())].reset_index()
+df2 = df2[df2['SPECIFIER'].str.contains('ALARM')].reset_index()
 print(df2['SPECIFIER'])
 
 # create alarm no cloumn based on index
 df2['number'] = df2.index
-df2['system'] = 'L1_Palletizer'
+df2['system'] = 'L6_Palletizer'
 df2['tag'] = df2.SPECIFIER
 df2['description'] = df2.DESCRIPTION
 df2 = df2[['tag','system','number','description']]
@@ -26,5 +26,5 @@ for i, row in df2.iterrows():
         row.description = row.description[row.description.find(']') + 2 :]
         
 # save to excel file
-file_name = 'Excel files/L1_Palletizer_Alarm_Data.xlsx'
+file_name = 'Excel files/L6_Palletizer_Alarm_Data.xlsx'
 df2.to_excel(file_name)

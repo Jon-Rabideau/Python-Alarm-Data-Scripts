@@ -8,10 +8,10 @@ table = [['tag', 'system', 'number', 'description']]
 pre = "<![CDATA['"
 post = "']]>"
 # openFile is txt to import, saveFile is excel to export
-openFile = 'TEXT_L2_CasePacker_P3Infeed.txt'
-saveFile = 'L2_CasePacker_P3_Alarm_Data.xlsx'
-currentTag = 'P3Infeed'
-currentSystem = 'L2_CasePacker'
+openFile = 'Text Files\L1_CasePacker_Filtered_P0System.txt'
+saveFile = 'L1_CasePacker_P0System_Alarm_Data.xlsx'
+currentTag = 'P0System_AlarmNo'
+currentSystem = 'L1_CasePacker'
 
 # Open file
 with open(openFile) as file:

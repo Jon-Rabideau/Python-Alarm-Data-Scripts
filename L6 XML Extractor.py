@@ -11,7 +11,7 @@ post = "']]>"
 # openFile is txt to import, saveFile is excel to export
 openFile = 'TEXT_L6_Casepacker_SystemMsg.txt'
 saveFile = 'L6_CasePacker_System_Alarm_Data.xlsx'
-currentTag = 'Metering'
+currentTag = 'Metering_AlarmNo'
 currentSystem = 'L6_CasePacker'
 
 # Open file
